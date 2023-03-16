@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/css/styles.css">
+    </head>
+    <body>
+      <div class="wrapper">
+        <h2>Heart Failure Predictor, made with Keras, Tensorflow</h2>
+        <form method='post'>
+          <div class="flex">
+            <div>
+          <label for="age">Age</label>
+          <input type='text' name='age' placeholder='1 to 99' /></br>
+          <label for="restingBP">Resting blood pressure</label>
+          <input type='text' name='restingBP' placeholder='mm/hg' /></br>
+          <label for="cholesterol">Cholesterol</label>
+          <input type='text' name='cholesterol' placeholder='mm/dl' /></br>
+          <label for="fasting">Fasting blood sugar</label>
+          <input type='text' name='fasting' placeholder='1: if Fasting BS higher than 120 mg/dl, 0: otherwise'/></br>
+          <label for="maxHR">Maximum heart rate achieved</label>
+          <input type='text' name='maxHR' placeholder='Numeric value between 60 and 202' /></br>
+          <label for="oldPeak">Old peak</label>
+          <input type='text' name='oldPeak' placeholder='Numeric value measured in depression'/></br>
+          <label for="gender">Gender</label>
+          <input type='text' name='gender' placeholder='M: Male, F: Female' /></br>
+          </div>
+         <div>
+          <label for="chestPain">Chest pain</label>
+          <p>TA: Typical Angina, ATA: Atypical Angina, NAP: Non-Anginal Pain, ASY: Asymptomatic</p>
+          <input type='text' name='chestPain' placeholder='ATA, NAP, ASY or TA' /></br>
+          <label for="ECG">Resting electrocardiogram results</label>
+          <p>N: Normal, ST: having ST-T wave abnormality, LVH: showing probable or definite left ventricular hypertrophy</p>
+          <input type='text' name='ECG' placeholder='N, ST or LVH' /></br>
+          <label for="angina">Exercise induced angina</label>
+          <input type='text' name='angina' placeholder='Y or N' /></br>
+          <label for="STSlope">ST slope</label>
+          <input type='text' name='STSlope' placeholder='UP, DOWN or FLAT' /></br>
+         </div>
+          </div>
+          <div class="flex-end">
+            <input type='submit' class="button"/>
+          </div> 
+        </form>
+          <h3> {{ risk }}</h3>
+          <h3>The result is {{ result }}</h3>
+      </div>
+       
+</body>
+</html>
